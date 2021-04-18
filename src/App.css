@@ -1,0 +1,84 @@
+.App {
+  text-align: center;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 5%;
+  margin-bottom:5%
+
+}
+
+
+
+
+.movie_card:hover{
+  transform: scale(1.1);
+  transition:0.4s ease-in-out;
+  -webkit-box-shadow: 11px 13px 26px -15px rgba(0,0,0,0.75);
+-moz-box-shadow: 11px 13px 26px -15px rgba(0,0,0,0.75);
+box-shadow: 11px 13px 26px -15px rgba(0,0,0,0.75);
+
+} 
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.movie_card{
+  background-color: rgb(243, 237, 238) ;
+  width: 24%;
+  margin :2% 0.5%;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px white;
+}
+.movie_card > .movie_head {
+  display : flex;
+  justify-content: space-between;
+}
+.movie_card > .movie_head> h3 {
+  padding: 10px 0 10px 20px;
+  font-size: 1.2rem;
+}
+.movie_card > .movie_head> p{
+  padding: 10px;
+}
+.movie_card > img {
+  width:100%;
+  height: 400px;
+  border-radius: 5px 5px 0 0;
+}
+.movie_card > p {
+  padding:0 10px 5px 10px;
+}
+
+
+input {
+   
+  
+  border: 1px solid rgb(211, 209, 209);
+  border-radius: 10px;
+  
+ 
+}
+.input-group label{
+  width:20%;
+ }
+ 
+ .input-group input{
+     width:80%;
+ }
