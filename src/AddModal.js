@@ -9,7 +9,7 @@ const AddModal=({addMovie})=>{
   
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
+  const handleShow = () => setShow(true);
   const [movie , setMovie]=useState(
       {id:uuidv4(),
           title :"",
@@ -45,7 +45,7 @@ const AddModal=({addMovie})=>{
 
     return (
         <div>
-           <Button variant="danger"  style={{marginLeft:'80%', marginTop:'5%' }}>
+           <Button variant="danger" onClick={handleShow} style={{marginLeft:'80%', marginTop:'5%' }}>
          Add movie
         </Button>
         <Modal show={show} onHide={handleClose}>
