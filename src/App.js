@@ -3,8 +3,10 @@ import { v4 as uuidv4 } from 'uuid';
 import React,{useState} from 'react';
 import MovieList from './MovieList';
 import Search from './Search';
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AddModal from './AddModal.js';
+import Description from './Description';
 
 function App() {
   const [keyword,setKeyword] = useState("")
@@ -69,9 +71,12 @@ setMovies(movies.concat(movie))
   return (
     <div className="App">
       <header className="App-header">
+        <BrowserRouter>
         <Search search={search} setRate={setRate} newRate={newRate}/>
         
        <MovieList addMovie={addMovie} movies={movies.filter(el => el.rate >= newRate && el.title.toLowerCase().includes(keyword.toLowerCase().trim()))}/>
+       <Route path="/description/:id" render={ (props) => <Description {...props} movies={movies}/>} /> 
+       </BrowserRouter>
       </header>
     </div>
   );

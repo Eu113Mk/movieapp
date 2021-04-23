@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import StarRatingComponent from 'react-star-rating-component';
 
 const MovieCard = ({movie}) => {
@@ -8,6 +9,8 @@ const MovieCard = ({movie}) => {
             <h5>{movie.title}</h5>
             <p>{movie.description}</p>
             <h5>{movie.genre}</h5>
+            <Link to={`description/${movie.id}`}><button>Description</button></Link>
+             <hr/>
             <StarRatingComponent 
           name="rate1" 
           starCount={5}
@@ -16,6 +19,7 @@ const MovieCard = ({movie}) => {
         />
            <hr/>
         </div>
+        
     )
 }
 
